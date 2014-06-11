@@ -34,7 +34,7 @@ module Unfuddle
         req.headers['Content-Type'] = 'application/json'
         req.body = {message:{title:title, body:body}}.to_json
       end
-      response.status == 201 ? true : false
+      response.status == 201 ? response : false      
     end
 
     def message_html_comment(target_url, message_title)
